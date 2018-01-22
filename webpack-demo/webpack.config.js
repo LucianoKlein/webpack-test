@@ -22,6 +22,7 @@ module.exports = {
             inject: false,//head body false
             title: 'A is good',
             date: new Date(),
+            //压缩配置
             minify: {
                 removeComments: true,
                 //collapseWhitespace: true
