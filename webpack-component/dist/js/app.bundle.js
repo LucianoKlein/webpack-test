@@ -65,21 +65,25 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_layer_layer_js__ = __webpack_require__(6);
 
 
-const App = function () {
-    const Num = 99
-    alert(Num)
-    console.log(__WEBPACK_IMPORTED_MODULE_1__components_layer_layer_js__["a" /* default */])
-}
-new App()
+__webpack_require__(1);
+
+var _layer = __webpack_require__(6);
+
+var _layer2 = _interopRequireDefault(_layer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+    var Num = 99;
+    alert(Num);
+    console.log(_layer2.default);
+};
+new App();
 
 /***/ }),
 /* 1 */
@@ -102,8 +106,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./common.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./common.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!./common.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!./common.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -121,7 +125,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "html,body{\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: skyblue;\r\n}\r\nul,li {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n}", ""]);
+exports.push([module.i, "html,body{\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: skyblue;\r\n}\r\nul,li {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n}\r\n.flex-div {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}", ""]);
 
 // exports
 
@@ -677,17 +681,22 @@ module.exports = function (css) {
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 // import tpl from './layer.html';
 function layer() {
     return {
         name: 'layer',
         tpl: tpl
-    }
+    };
 }
-/* harmony default export */ __webpack_exports__["a"] = (layer);
+exports.default = layer;
 
 /***/ })
 /******/ ]);
