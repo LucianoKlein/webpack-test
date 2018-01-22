@@ -1,0 +1,13 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: skyblue;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flex-div {
+    display: flex;
+}
