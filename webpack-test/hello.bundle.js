@@ -68,7 +68,17 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1)
-__webpack_require__(2)
+__webpack_require__(3)
+// require('./style.css')
+//css-loader使得webpack可以处理css文件
+//style-loader使得webpack可以将处理过css文件以style标签的形式插入页面
+//命令行指定css文件处理需要的loader
+//webpack hello.js hello.bundle.js --module-bind 'css=style-loader!css-loader' 
+//指定处理某类文件需要的loader --module-bind 'css=style-loader!css-loader'
+//监听文件变化 自动打包 --watch
+//打包过程 --progress
+//打包模块 --display-modules
+//显示打包模块的原因 --display-reasons
 function hello(str){
     alert(str);
 }
@@ -86,13 +96,14 @@ function world(str){
 world('hello-pack')
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(3);
+var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -100,7 +111,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(6)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -117,21 +128,21 @@ if(false) {
 }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(5)(false);
 // imports
 
 
 // module
-exports.push([module.i, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    background-color: red;\r\n}", ""]);
+exports.push([module.i, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    background-color: yellow;\r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -213,7 +224,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -269,7 +280,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -585,7 +596,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 
