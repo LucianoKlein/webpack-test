@@ -125,7 +125,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "html,body{\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: skyblue;\r\n}\r\nul,li {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n}\r\n.flex-div {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}", ""]);
+exports.push([module.i, ".flex-div {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\nhtml,body{\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: skyblue;\r\n}\r\nul,li {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n}", ""]);
 
 // exports
 

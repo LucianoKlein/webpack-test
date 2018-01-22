@@ -31,6 +31,8 @@ module.exports = {
                     //presets: ['latest'] //babel处理语法的规则
                 //}
             },
+            //处理css文件需要安装的loader有：style-loader，css-loader，postcss-loader。
+            //配合postcss-loader使用需要安装插件有：postcss-import，autoprefixer。
             {
                 test: /\.css$/,
                 use: [
@@ -38,7 +40,7 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1
+                            importLoaders: 1//表示在css-loader之后指定1个数量loader来处理@import进来的资源
                         }
                     },
                     {
