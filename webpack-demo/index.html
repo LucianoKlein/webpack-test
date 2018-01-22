@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>webpack-demo</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type="text/javascript">
+    <%= 
+    compilation.assets[htmlWebpackPlugin.files.chunks.main.entry
+    .substr(htmlWebpackPlugin.files.publicPath.length)].source()
+    %>
+    </script>
 </head>
 <body>
-    <script src=""></script>
+        <% for (var key in htmlWebpackPlugin.files.chunks) { %>
+            <% if (key !== 'main') { %>
+            <script type="text/javascript"
+            src="<%= htmlWebpackPlugin.files.chunks[key].entry %>"></script>
+            <% } %>
+        <% } %>
 </body>
 </html>
