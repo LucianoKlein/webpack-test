@@ -533,9 +533,10 @@ var _layer2 = _interopRequireDefault(_layer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-    var Num = 99;
-    alert(Num);
-    console.log(_layer2.default);
+   var dom = document.getElementById('app');
+   console.dir(dom);
+   var layer = new _layer2.default();
+   dom.innerHTML = layer.tpl;
 };
 new App();
 
@@ -700,8 +701,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function layer() {
     return {
-        name: 'layer',
-        tpl: _layer2.default
+        'name': 'layer',
+        'tpl': _layer2.default
     };
 } //string
 exports.default = layer;
@@ -710,7 +711,7 @@ exports.default = layer;
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"layer\">\r\n    <div>this is layer</div>\r\n</div>";
+module.exports = "<div class=\"layer\">\r\n    <div>this is layer tpl</div>\r\n</div>";
 
 /***/ }),
 /* 8 */
