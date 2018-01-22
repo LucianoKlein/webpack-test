@@ -11,9 +11,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                tets: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel'
+                test: /\.js$/,
+                exclude: __dirname + '/node_modules/',
+                include: __dirname + '/src/',
+                loader: 'babel-loader',
+                // query: {
+                //     presets: ['latest']
+                // }
             }
         ]
     },
