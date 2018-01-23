@@ -68,8 +68,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1)
-__webpack_require__(3)
-// require('./style.css')
+__webpack_require__(2)
+__webpack_require__(7)
 //css-loader使得webpack可以处理css文件
 //style-loader使得webpack可以将处理过css文件以style标签的形式插入页面
 //命令行指定css文件处理需要的loader
@@ -96,14 +96,13 @@ function world(str){
 world('hello-pack')
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(4);
+var content = __webpack_require__(3);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -111,7 +110,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(6)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -128,10 +127,10 @@ if(false) {
 }
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -142,7 +141,7 @@ exports.push([module.i, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -224,7 +223,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -280,7 +279,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(7);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -596,7 +595,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 
@@ -689,6 +688,12 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:9)\nYou may need an appropriate loader to handle this file type.\n| html,body{\r\n|     padding: 0;\r\n|     margin: 0;\r");
 
 /***/ })
 /******/ ]);
