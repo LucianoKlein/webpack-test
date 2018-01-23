@@ -533,10 +533,17 @@ var _layer2 = _interopRequireDefault(_layer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-   var dom = document.getElementById('app');
-   console.dir(dom);
-   var layer = new _layer2.default();
-   dom.innerHTML = layer.tpl;
+    var dom = document.getElementById('app');
+    console.dir(dom);
+    var layer = new _layer2.default();
+    dom.innerHTML = layer.tpl({
+        'name': 'ejs-loader',
+        'arr': ['wjm', 'mjw', 'zzz'],
+        'object': {
+            's-name': 'wjm',
+            's-age': 18
+        }
+    });
 };
 new App();
 
@@ -699,19 +706,45 @@ __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//import tpl from './layer.html';  html-loader处理后tpl.html文件，返回值为字符串，可直接插入
 function layer() {
     return {
         'name': 'layer',
-        'tpl': _layer2.default
+        'tpl': _layer2.default //ejs-loader处理后，tpl为可执行函数，所以可在app.js执行
     };
-} //string
+} //ejs-loader处理后的tpl.tpl文件,返回值为可执行的函数
 exports.default = layer;
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"layer\">\r\n    <div>this is layer tpl</div>\r\n</div>";
+module.exports = function (obj) {
+obj || (obj = {});
+var __t, __p = '', __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="layer">\r\n    <div>this is ' +
+((__t = ( name )) == null ? '' : __t) +
+' tpl</div>\r\n    ';
+ for (var i = 0; i < arr.length; i++) { ;
+__p += '\r\n        <h1>' +
+((__t = ( arr[i] )) == null ? '' : __t) +
+'</h1>\r\n    ';
+ } ;
+__p += '\r\n    ';
+ for (var key in object) { ;
+__p += '\r\n        <li>' +
+((__t = ( key )) == null ? '' : __t) +
+':' +
+((__t = ( object[key] )) == null ? '' : __t) +
+'</li>\r\n    ';
+ } ;
+__p += '\r\n</div>';
+
+}
+return __p
+}
 
 /***/ }),
 /* 8 */
@@ -753,7 +786,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".flex-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.layer {\n  width: 600px;\n  height: 200px;\n  background-color: red;\n}\n· > div {\n  width: 400px;\n  height: 100px;\n  background-color: orange;\n}\n", ""]);
+exports.push([module.i, ".flex-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.layer {\n  width: 600px;\n  height: 200px;\n  background-color: red;\n}\n· > div {\n  width: 400px;\n  height: 100px;\n  background-color: orange;\n}\n· > h1 {\n  background-color: aquamarine;\n  font-size: 20px;\n  -webkit-text-decoration: aqua;\n          text-decoration: aqua;\n}\n", ""]);
 
 // exports
 
