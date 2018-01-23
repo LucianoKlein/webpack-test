@@ -80,7 +80,7 @@ Usage: https://webpack.github.io/docs/cli.html
 
 通过以上命令，我们就已经初步了解并使用了webpack的打包功能。
 
-此外``webpack hello.js hello.bundle.js`该命令还可增加参数，来达到不同的使用效果，常见的有：
+此外`webpack hello.js hello.bundle.js`该命令还可增加参数，来达到不同的使用效果，常见的有：
 
 - 监听文件变动自动打包：`webpack hello.js hello.bundle.js --watch`
 - 查看打包的模块:`webpack hello.js hello.bundle.js --display-moudles`
