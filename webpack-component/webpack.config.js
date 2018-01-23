@@ -115,6 +115,20 @@ module.exports = {
             {
                 test:/\.tpl$/,
                 loader:'ejs-loader'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                //'file-loader','url-loader','image-webpack-loader'
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 20000,
+                            name:'assets/[name]-[hash:5].[ext]'//图片打包后的输出地址
+                        }
+                    },
+                    'image-webpack-loader'
+                ]
             }
         ]
     },

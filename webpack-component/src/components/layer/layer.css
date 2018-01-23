@@ -6,13 +6,19 @@
   height: 200px;
   background-color: red;
 }
-· > div {
+.layer > div {
   width: 400px;
   height: 100px;
   background-color: orange;
+  background-image: url(../../assets/bg_01.jpg);
 }
-· > h1 {
+.layer > h1 {
   background-color: aquamarine;
-  font-size: 20px;
+  font-size: 100px;
   text-decoration: aqua;
+}
+.layer > ul > li {
+  background-color: orange;
+  float: left;
+  font-size: 50px;
 }
