@@ -130,7 +130,9 @@ Usage: https://webpack.github.io/docs/cli.html
 
 webpack的配置文件有两种创建方式
 
-1. 在项目根目录下创建webpack.config.比如我们的测试例，直接在webpack-demo目录下新建`webpack.config.js`，在该文件里填写好相应配置后，在命令行直接运行webpack即可。`webpack.config.js`中的配置内容如下：
+1. 在项目根目录下创建webpack.config.比如我们的测试例，直接在webpack-demo目录下新建`webpack.config.js`，在该文件里填写好相应配置后，在命令行直接运行webpack即可。
+1. 在项目根目录下自定义一个配置文件,比如`webpack.dev.config.js`，文件内容参考`webpack.config.js`，打包时命令行输入`webpack —config webpack.dev.config.js`
+1. `webpack.config.js`中的配置内容如下：
 
 ```js
 module.exports = {
@@ -193,7 +195,5 @@ module.exports = {
     ]
 }
 ```
-
-1. 在项目根目录下自定义一个配置文件,比如`webpack.dev.config.js`，文件内容参考`webpack.config.js`，打包时命令行输入`webpack —config webpack.dev.config.js`
 
 通过以上步骤，你可以自动化生成html页面
